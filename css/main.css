@@ -1,0 +1,452 @@
+.navImg{
+    width: 20%;
+    height: 120px;
+    margin-left: 70px;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 35px;
+}
+
+.shoeImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.page-container{
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 70px;
+}
+
+.normal-page-container{
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 50px;
+}
+
+.my-item-page-container{
+    margin-top: 50px;
+}
+
+.text{
+    text-align: center;
+
+}
+
+.selectItemBox{
+    width: 400px;
+    height: 250px;
+    float: left;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.my-items-img{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 35px;
+}
+
+
+.my-items-page{
+    height: 275px;
+    margin-left: 35px;
+}
+
+.line{
+    border: 1px solid black;
+}
+
+.myItemBox{
+    height: 250px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 225px;
+}
+
+.leftBox {
+    float: left;
+    margin-left: 35px;
+    padding-top: 30px;
+}
+
+
+.itemsImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.dropdown{
+    margin-top: 150px;
+    font-size: medium;
+
+}
+
+.information{
+    margin-top: 60px;
+    margin-left: 150px;
+
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: white;
+    height: 50px;
+
+}
+.button:hover{
+    color: #e95f5c;
+
+}
+
+.sum-up{
+    float: right;
+    margin-right: 250px;
+}
+.navBar{
+    width: auto;
+    height: 100px;
+    margin-left: 10px;
+    text-align: left;
+
+}
+
+.viewBasket{
+    margin-top: 5px;
+    margin-right: 30px;
+    width: 700px;
+    height: auto;
+    border: 1px solid black;
+    float: right;
+}
+
+.textCheckout{
+    word-spacing: 50px;
+}
+
+.innerbox {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+.imgCheck{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 150px;
+    height: auto;
+    float: left;
+
+}
+
+.checkoutBox{
+    height: 250px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+
+}
+
+.textCheckoutBox{
+    word-spacing: 90px;
+}
+
+.sumUp{
+    width: 300px;
+    height: auto;
+    float: right;
+}
+
+.continueShoppingBtn{
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+.continueShoppingBtn:hover{
+    color: #e95f5c;
+}
+.betalBtn{
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+.betalBtn:hover{
+    color: #e95f5c;
+
+}
+.underSumUp{
+    width: 700px;
+    height: 200px;
+}
+
+.boxCheck{
+    width: 175px;
+    height: 150px;
+    float: left;
+    margin-top: 60px;
+    margin-left: 50px;
+
+}
+
+.footer{
+    position:fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    Background-color: Black;
+    color: white;
+    margin-top: 1300px;
+}
+
+.searchBox{
+    border: 1px solid white;
+    color:white;
+    background-color: black;
+    width: 200px;
+    text-align: center;
+}
+
+.footerText{
+    margin-left: 50px;
+}
+
+.footerBtn{
+    float: right;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin-right: 50px;
+}
+
+.footerBtn:hover{
+    color:  #e95f5c;
+
+}
+.searchBoxNav{
+    border: 1px solid white;
+    color:white;
+    background-color: black;
+    text-align: center;
+
+}
+.charityImg{
+    display: block;
+    float: left;
+    max-width: 25%;
+    height:200px;
+    margin-top: 70px;
+    margin-left: 130px;
+}
+.logoIndexImg{
+    max-width: 35%;
+    max-height: 35%;
+}
+
+.bestSellerImg {
+    max-width: 25%;
+    height: 200px ;
+    margin-top: 70px;
+}
+
+.endingDiv{
+    height: 220px;
+}
+
+.searchBar{
+    width: 60%;
+    height: 50px;
+    margin-top: 4%;
+    margin-left: 250px;
+    font-size: large;
+    text-align: center;
+
+}
+
+.CharityImg{
+    width: 33%;
+    height: 200px;
+
+}
+
+.lastNavBtn{
+    border-right: none;
+}
+.navBtn{
+    border-right: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+#nav{
+    Background-color: rgb(0, 0, 0);
+}
+
+#nav-wrapper{
+    width: auto;
+    height: 100px;
+    margin-left: 70px;
+
+}
+
+#nav ul{
+    list-style-type: none;
+    position: relative;
+
+}
+
+#nav ul li{
+    display: inline-block;
+    background-color: black;
+    margin-top: 0px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+#nav ul li:hover{
+    background-color: black;
+
+}
+
+#nav ul li a, visited {
+    color:#ccc;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#nav ul li a:hover{
+    color:  #e95f5c;
+    text-decoration: none;
+}
+#nav ul li:hover ul{
+    display: block;
+}
+
+#nav ul ul{
+    display: none;
+    position: absolute;
+    background-color: #e3e3e3;
+
+
+}
+
+#nav ul ul li{
+    display: block;
+    text-align: left;
+}
+
+#nav ul ul li a,visited{
+    color: #ccc;
+}
+
+#nav ul ul li a:hover{
+    color: #e95f5c;
+}
+
+
+
+
+#filtering{
+
+}
+
+#filtering ul{
+    list-style-type: none;
+    position: relative;
+}
+
+#nav ul li{
+    display: inline-block;
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+
+#outsideSlide{
+    width: 600px;
+    overflow: hidden;
+
+}
+#slideShow{
+    position: relative;
+    width: 2400px;
+    animation-name: Charity;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+#slideShow img{
+
+    float:left;
+}
+
+@keyframes Charity{
+    0% {
+        left:0px;
+    }
+    20%{
+        left:0px;
+    }
+    25%{
+        left:-600px;
+    }
+    45%{
+        left:-600px;
+    }
+    50%{
+        left:-1200px;
+    }
+    70%{
+        left:-1200px;
+    }
+    75%{
+        left:-1800px;
+    }
+    95%{
+        left:-1800px;
+    }
+    1000% {
+        left: -2400px;
+    }
+}
+
+
