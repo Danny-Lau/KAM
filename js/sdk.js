@@ -43,7 +43,7 @@ const SDK = {
 
                 if (err) return cb(err);
 
-                let userdata = JSON.parse(data);
+               cb(null, data);
 
             });
         },

@@ -302,6 +302,20 @@
     border-right: 1px solid white;
 }
 
+.chooseLogin{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.loginText{
+    color: black;
+}
+
+.loginText:hover{
+    color:  #e95f5c;
+
+}
+
 
 
 
