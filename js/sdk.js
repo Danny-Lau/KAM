@@ -69,6 +69,42 @@ const SDK = {
 
     },
 
+    Seller:{
+
+        sellerLogin:(companyName, password, cb) => {
+            SDK.request({
+                data:{
+                   companyName: companyName,
+                   password: password,
+                },
+                url:"/seller/login",
+                method: "POST"
+            }, (err, data) => {
+
+                cb(null, data);
+            });
+        },
+
+    },
+
+    Admin:{
+
+        adminLogin:(username, password, cb) => {
+            SDK.request({
+                data:{
+                    username: username,
+                    password: password,
+                },
+                url:"/admin/login",
+                method: "POST"
+            }, (err, data) => {
+
+                cb(null, data);
+            });
+        },
+
+    },
+
     Product: {
 
         loadProduct:(cb) => {
@@ -84,11 +120,11 @@ const SDK = {
 
     },
 
-    loadFiltering:(cb) => {
+    loadFiltering:() => {
         $("#nav-filtering").load("filtering.html")
     },
 
-    loadNav: (cb) =>{
+    loadNav: () =>{
         const currentUser = SDK.User.current();
         if(currentUser) {
             $("#nav-container").load("currentNav.html")
