@@ -20,11 +20,11 @@ $(document).ready(() => {
                     $(".form-group").addClass("There was a mistake");
                 }
                 else if (err) {
-                    console.log("fail")
+                    console.log("Fail")
                 }
                 else {
                     alert("You are now logged in as an admin");
-                    window.location.href = "../index.html";
+                    window.location.href = "index.html";
                 }
 
             });

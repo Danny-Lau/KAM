@@ -3,6 +3,7 @@ $(document).ready(() => {
     SDK.loadNav();
 
     $("#login-button").click(() => {
+        event.preventDefault();
 
         //Sætter parameterne til log-in oplysningerne
         const username = $("#inputUsername").val();
@@ -10,27 +11,32 @@ $(document).ready(() => {
 
         //Felterne må ikke stå tomme
         if (!username || !password) {
-            alert("Udfyld venligt alle felterne");
+            alert("Please fill in all required fields");
         }
         else {
             //Gennemngår de indtastede oplysninger
-            event.preventDefault();
             SDK.User.login(username, password, (err) => {
 
+
                 if (err && err.xhr.status === 401) {
-                    $(".form-group").addClass("Der opstod en fejl");
+                    $(".form-group").addClass("There was a mistake");
                 }
                 else if (err) {
-                    console.log("fejl")
+                    console.log("Fail")
                 }
                 else {
-                    alert("Du er logget ind")
+                    alert("You are now logged in")
                     window.location.href = "index.html";
                 }
 
             });
         }
 
+    });
+
+    $("#signup-button").click(() => {
+        event.preventDefault();
+       window.location.href = "signUp.html";
     });
 
 

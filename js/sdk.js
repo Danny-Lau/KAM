@@ -48,24 +48,44 @@ const SDK = {
             });
         },
 
-        signup:(username, password, cb) => {
+        signup:(username, password, mail, forsendelsesInformationerId, cb) => {
             SDK.request({
+
                 data: {
                     username: username,
                     password: password,
+                    mail: mail,
+                    forsendelsesInformationerId: forsendelsesInformationerId
+
                 },
                 url: "/user/signup",
                 method: "POST"
             }, (err, data) =>{
 
-                if(err) return cb(err);
-
-                let userdata = JSON.parse(data);
-
                 cb(null, data);
 
                 });
         },
+
+        userInfo:(address, postNumber, city, cb) => {
+            SDK.request({
+                data:{
+                    address: address,
+                    postNumber: postNumber,
+                    city: city
+                },
+                url:"/sendingInfo",
+                method: "POST"
+            }, (err, data) => {
+
+                if(err) return cb(err);
+
+                let sendingInfo = JSON.parse(data);
+
+                SDK.Storage.persist("SendingId", sendingInfo.forsendelsesInformationerId)
+
+            })
+        }
 
     },
 
@@ -118,6 +138,26 @@ const SDK = {
             });
         },
 
+        createProduct:(productDescription, numbers, sellerID, price, variant, gender, cb ) => {
+            SDK.request({
+                data:{
+                    productDescription: productDescription,
+                    numbers: numbers,
+                    sellerID:sellerID,
+                    price: price,
+                    variant: variant,
+                    gender: gender
+
+                },
+                url:"/Product",
+                method:"POST"
+
+            }, (err, data) => {
+
+                cb(null, data);
+            })
+        }
+
     },
 
     loadFiltering:() => {
@@ -125,15 +165,11 @@ const SDK = {
     },
 
     loadNav: () =>{
-        const currentUser = SDK.User.current();
-        if(currentUser) {
-            $("#nav-container").load("currentNav.html")
-
-        } else {
             $("#nav-container").load("nav.html")
-        }
+    },
 
-
+    loadSellerNav:() => {
+        $("#nav-container").load("sellerNavigation.html")
     },
 
     Storage: {
