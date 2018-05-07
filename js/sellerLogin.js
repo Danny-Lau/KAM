@@ -24,7 +24,7 @@ $(document).ready(() => {
                 }
                 else {
                     alert("You are now logged in as a seller")
-                    window.location.href = "myProducts.html";
+                    window.location.href = "uploadProdcut.html";
                 }
 
             });

@@ -114,7 +114,7 @@ const SDK = {
 
                 if (err) return cb(err);
 
-                SDK.Storage.persist(" number", data.sellerId);
+                SDK.Storage.persist(" id", data.sellerId);
                 SDK.Storage.persist(" Company", data.companyName);
                 SDK.Storage.persist(" password", data.password);
                 SDK.Storage.persist(" mail", data.mail);
@@ -171,21 +171,24 @@ const SDK = {
             });
         },
 
-        createProduct:(productDescription, numbers, sellerID, price, variant, gender, cb ) => {
+        createProduct:(url, productDescription, stock, sellerID, price, variant, gender, cb ) => {
             SDK.request({
                 data:{
+                   // url: url,
                     productDescription: productDescription,
-                    numbers: numbers,
+                    stock: stock,
                     sellerID:sellerID,
                     price: price,
                     variant: variant,
                     gender: gender
 
                 },
-                url:"/Product",
+                url:"/Product/New",
                 method:"POST"
 
             }, (err, data) => {
+
+                if (err) return (err);
 
                 cb(null, data);
             })
@@ -203,7 +206,7 @@ const SDK = {
     },
 
     loadSellerNav:() => {
-        $("#nav-container").load("sellerNavigation.html")
+        $("#nav-container").load("sellerNav.html")
     },
 
 
