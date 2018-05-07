@@ -43,28 +43,36 @@ const SDK = {
 
                 if (err) return cb(err);
 
-               cb(null, data);
+
+                SDK.Storage.persist("User", data.username);
+
+                cb(null, data);
 
             });
         },
 
-        signup:(username, password, mail, forsendelsesInformationerId, cb) => {
+        signup: (username, password, cb) => {
             SDK.request({
-
                 data: {
                     username: username,
                     password: password,
-                    mail: mail,
-                    forsendelsesInformationerId: forsendelsesInformationerId
 
                 },
-                url: "/user/signup",
+                url:"/user/signup",
                 method: "POST"
-            }, (err, data) =>{
+            }, (err, data) => {
+
+                if (err) return cb(err);
+
+                let userdata = JSON.parse(data);
+
+                SDK.Storage.persist("userId", userdata.userId);
+                SDK.Storage.persist("username", userdata.username);
+                SDK.Storage.persist("password", userdata.password);
 
                 cb(null, data);
 
-                });
+            });
         },
 
         userInfo:(address, postNumber, city, cb) => {
@@ -133,6 +141,7 @@ const SDK = {
                 method: "GET"
 
             }, (err, products) => {
+                if (err) return (err);
 
                 cb(null, products);
             });

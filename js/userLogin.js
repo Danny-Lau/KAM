@@ -3,8 +3,7 @@ $(document).ready(() => {
     SDK.loadNav();
 
     $("#login-button").click(() => {
-        event.preventDefault();
-
+    event.preventDefault();
         //Sætter parameterne til log-in oplysningerne
         const username = $("#inputUsername").val();
         const password = $("#inputPassword").val();
