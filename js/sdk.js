@@ -43,19 +43,22 @@ const SDK = {
 
                 if (err) return cb(err);
 
-
-                SDK.Storage.persist("User", data.username);
+                SDK.Storage.persist(" Username", data.username);
+                SDK.Storage.persist(" password", data.password);
+                SDK.Storage.persist(" mail", data.mail);
+                SDK.Storage.persist(" UserId", data.brugerId);
+                SDK.Storage.persist(" type", data.type);
 
                 cb(null, data);
-
             });
         },
 
-        signup: (username, password, cb) => {
+        signup: (username, password, mail,  cb) => {
             SDK.request({
                 data: {
                     username: username,
                     password: password,
+                    mail: mail,
 
                 },
                 url:"/user/signup",
@@ -63,12 +66,12 @@ const SDK = {
             }, (err, data) => {
 
                 if (err) return cb(err);
+                SDK.Storage.persist(" Username", data.username);
+                SDK.Storage.persist(" password", data.password);
+                SDK.Storage.persist(" mail", data.mail);
+                SDK.Storage.persist(" UserId", data.brugerId);
+                SDK.Storage.persist(" type", data.type);
 
-                let userdata = JSON.parse(data);
-
-                SDK.Storage.persist("userId", userdata.userId);
-                SDK.Storage.persist("username", userdata.username);
-                SDK.Storage.persist("password", userdata.password);
 
                 cb(null, data);
 
@@ -99,7 +102,7 @@ const SDK = {
 
     Seller:{
 
-        sellerLogin:(companyName, password, cb) => {
+        login:(companyName, password, cb) => {
             SDK.request({
                 data:{
                    companyName: companyName,
@@ -108,6 +111,17 @@ const SDK = {
                 url:"/seller/login",
                 method: "POST"
             }, (err, data) => {
+
+                if (err) return cb(err);
+
+                SDK.Storage.persist(" number", data.sellerId);
+                SDK.Storage.persist(" Company", data.companyName);
+                SDK.Storage.persist(" password", data.password);
+                SDK.Storage.persist(" mail", data.mail);
+                SDK.Storage.persist(" cvr", data.cvr);
+                SDK.Storage.persist(" number", data.number);
+                SDK.Storage.persist(" type", data.type);
+
 
                 cb(null, data);
             });
@@ -126,6 +140,16 @@ const SDK = {
                 url:"/admin/login",
                 method: "POST"
             }, (err, data) => {
+
+                if (err) return cb(err);
+
+                SDK.Storage.persist(" id", data.adminId);
+                SDK.Storage.persist(" name", data.username);
+                SDK.Storage.persist(" password", data.password);
+                SDK.Storage.persist(" type", data.type);
+
+
+
 
                 cb(null, data);
             });
@@ -169,17 +193,20 @@ const SDK = {
 
     },
 
+
     loadFiltering:() => {
         $("#nav-filtering").load("filtering.html")
     },
 
     loadNav: () =>{
-            $("#nav-container").load("nav.html")
+        $("#nav-container").load("nav.html")
     },
 
     loadSellerNav:() => {
         $("#nav-container").load("sellerNavigation.html")
     },
+
+
 
     Storage: {
         prefix: "KAMMODESDK",

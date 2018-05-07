@@ -14,7 +14,7 @@ $(document).ready(() => {
         }
         else {
             event.preventDefault();
-            SDK.Seller.sellerLogin(companyName, password, (err) => {
+            SDK.Seller.login(companyName, password, (err) => {
 
                 if (err && err.xhr.status === 401) {
                     $(".form-group").addClass("There was a mistake");
@@ -24,7 +24,7 @@ $(document).ready(() => {
                 }
                 else {
                     alert("You are now logged in as a seller")
-                    window.location.href = "index.html";
+                    window.location.href = "myProducts.html";
                 }
 
             });
