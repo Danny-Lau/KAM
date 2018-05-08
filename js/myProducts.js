@@ -7,10 +7,10 @@ $(document).ready(() => {
     SDK.Product.loadSellerProduct((err, data) => {
 
         let productsList = $("#products");
-        let products = JSON.parse(data);
+        let product = JSON.parse(data);
 
         //For every product the specific information are shown
-        products.forEach((product) => {
+        product.forEach(product => {
           const sellerProductsHTML = `
           <div class= "myProductBox">
           

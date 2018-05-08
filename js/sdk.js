@@ -161,7 +161,7 @@ const SDK = {
 
         loadProduct:(cb) => {
             SDK.request({
-                url: "/Product",
+                url: "/Product/",
                 method: "GET"
 
             }, (err, products) => {

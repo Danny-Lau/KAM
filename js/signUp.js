@@ -4,7 +4,7 @@ $(document).ready(() => {
 
     $("#create-user-button").click(() => {
 
-//
+
         //Sætter parameterne til det som står i felterne
         const username = $("#inputUsername").val();
         const password = $("#inputPassword").val();
