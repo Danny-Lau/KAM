@@ -1,29 +1,30 @@
 $(document).ready(() => {
 
     SDK.loadNav();
+
     $("#Shoe").click(() => {
         const value = "Shoe";
-        SDK.Storage.persist("CAT", "Shoe")
+        SDK.Storage.persist("CAT", "Shoe");
         window.location.href  = "productsSection.html";
     });
     $("Pants").click(() => {
         const value = "Pants";
-        SDK.Storage.persist("CAT", "Pants")
+        SDK.Storage.persist("CAT", "Pants");
         window.location.href  = "productsSection.html";
     });
     $("#Sweaters").click(() => {
         const value = "Sweaters";
-        SDK.Storage.persist("CAT", "Sweaters")
+        SDK.Storage.persist("CAT", "Sweaters");
         window.location.href  = "productsSection.html";
     });
     $("#Shirt").click(() => {
         const value = "Shirt";
-        SDK.Storage.persist("CAT", "Shirt")
+        SDK.Storage.persist("CAT", "Shirt");
         window.location.href  = "productsSection.html";
     });
     $("#T-shirt").click(() => {
         const value = "T-shirt";
-        SDK.Storage.persist("CAT", "T-shirt")
+        SDK.Storage.persist("CAT", "T-shirt");
         window.location.href  = "productsSection.html";
     });
     $("#Accesories").click(() => {
@@ -45,6 +46,16 @@ $(document).ready(() => {
         const value = "Chinos";
         SDK.Storage.persist("CAT", "Chinos")
         window.location.href  = "productsSection.html";
+    });
+
+    $("#logout-button").click(() => {
+        SDK.Storage.remove(" Username");
+        SDK.Storage.remove(" password");
+        SDK.Storage.remove(" mail");
+        SDK.Storage.remove(" UserId");
+        SDK.Storage.remove(" type");
+        SDK.Storage.remove(" shippingId");
+
     });
 
 });

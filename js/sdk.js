@@ -217,14 +217,25 @@ const SDK = {
         $("#nav-filtering").load("filtering.html")
     },
 
-    loadNav: () =>{
-        $("#nav-container").load("nav.html")
-    },
+    loadNav: () => {
 
-    loadSellerNav:() => {
-        $("#nav-container").load("sellerNav.html")
-    },
 
+        const type = SDK.Storage.load(" type");
+
+        if (type == 1) {
+            $("#nav-container").load("userNav.html")
+
+        } else if (type == 2) {
+            $("#nav-container").load("sellerNav.html")
+        }
+          else if (type == 3) {
+            $("#nav-container").load("adminNav.html")
+        }
+
+        else {
+            $("#nav-container").load("Nav.html")
+        }
+    },
 
 
     Storage: {
