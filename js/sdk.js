@@ -171,6 +171,21 @@ const SDK = {
             });
         },
 
+        //Request til at hente produkter fra en specifik sælger
+        loadSellerProduct:(cb) => {
+
+            const sellerId = SDK.Storage.load("id");
+
+            SDK.request ({
+                url: "/Product/" + sellerId,
+                method: "GET"
+            }, (err, products) => {
+
+                cb(null, products);
+            });
+
+        },
+
         createProduct:(url, productDescription, stock, sellerID, price, variant, gender, cb ) => {
             SDK.request({
                 data:{
