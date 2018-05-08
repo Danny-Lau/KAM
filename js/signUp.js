@@ -23,8 +23,10 @@ $(document).ready(() => {
                 }
                 else if (err) {
                     console.log("Fail")
+                    alert("somthing went wrong pleas try agin")
                 } else {
                     window.location.href  = "index.html";
+                    alert("You are now singed in on kammode.dk")
 
                 }
             });
