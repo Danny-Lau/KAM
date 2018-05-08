@@ -49,6 +49,6 @@ $(document).ready(() => {
         SDK.Storage.remove(" UserId");
         SDK.Storage.remove(" type");
         SDK.Storage.remove(" shippingId");
-
+        window.location.href=(index.html);
     });
 });

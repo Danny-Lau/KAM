@@ -9,11 +9,12 @@ $(document).ready(() => {
         let product = data;
 
         product.forEach((product) => {
+
             const productHTML =`
 
         <div class="normal-page-container">
         <div class="box">
-           <a><img class="shoeImg" value="${product.productID}" id="Specifik_Product_Btn" src="${product.url}"/></a>
+           <a><img class="shoeImg product-btn"  id="${product.productID}" src="${product.url}"/></a>
             <p class="text" >${product.price}</p>
         </div>
                `;
@@ -21,11 +22,6 @@ $(document).ready(() => {
             $productList.append(productHTML);
                 
         })
-        $("#Specifik_Product_Btn").click(() => {
-            let value = $(this).value ;
-            window.alert(value)
-            window.alert("hej")})
-
 
     });
 

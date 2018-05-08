@@ -172,6 +172,10 @@ const SDK = {
             });
         },
 
+        onClickProduct:(id) => {
+            window.alert(id);
+        },
+
         //Request til at hente produkter fra en specifik sælger
         loadSellerProduct:(cb) => {
 
