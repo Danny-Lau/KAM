@@ -6,7 +6,13 @@ $(document).ready(() => {
         SDK.Storage.remove(" mail");
         SDK.Storage.remove(" UserId");
         SDK.Storage.remove(" type");
-        SDK.Storage.remove(" shippingId");
+        SDK.Storage.remove(" id");
+        SDK.Storage.remove(" Company");
+        SDK.Storage.remove(" cvr");
+        SDK.Storage.remove(" name");
+        SDK.Storage.remove(" number");
+        SDK.Storage.remove("CAT");
+
 
     });
 
