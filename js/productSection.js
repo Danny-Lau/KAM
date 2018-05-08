@@ -14,25 +14,23 @@ $(document).ready(() => {
 
         <div class="normal-page-container">
         <div class="box">
-           <a><img class="shoeImg product-btn"  id="${product.productID}" src="${product.url}"/></a>
+           <a><img class="shoeImg product-btn" data-product-id="${product.productID}"  src="${product.url}"/></a>
             <p class="text" >${product.price}</p>
         </div>
                `;
 
             $productList.append(productHTML);
                 
+        });
+        $(".product-btn").click(function() {
+            const productId = $(this).data("product-id");
+            SDK.Storage.persist(" productID", productId);
+
         })
 
-    });
-
-    $("#logout-button").click(() => {
-        SDK.Storage.remove(" Username");
-        SDK.Storage.remove(" password");
-        SDK.Storage.remove(" mail");
-        SDK.Storage.remove(" UserId");
-        SDK.Storage.remove(" type");
-        SDK.Storage.remove(" shippingId");
 
     });
+
+
 
 });
