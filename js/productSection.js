@@ -6,17 +6,22 @@ $(document).ready(() => {
 
     SDK.Product.loadProduct((err, data) => {
         let $productList = $("#productList");
-        let products = JSON.parse(data);
+        let product = data;
 
-        products.forEach((product) => {
+        product.forEach((product) => {
             const productHTML =`
                 <div class="box">
-                <p class="text"> ${product.price}</p>
+                <a><img class="shoeImg" value="${product.productID}" id="Specifik_Product_Btn" src="${product.url}"/><center><h5>${product.price}</p></h5></center></a>
                `;
 
             $productList.append(productHTML);
                 
         })
     })
+
+    $("#Specifik_Product_Btn").click(() => {
+        let value = $(this).value ;
+        window.alert(value)
+    });
 
 });

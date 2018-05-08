@@ -160,8 +160,9 @@ const SDK = {
     Product: {
 
         loadProduct:(cb) => {
+            let localCat = SDK.Storage.load("CAT");
             SDK.request({
-                url: "/Product/",
+                url: "/Product/category/" + localCat ,
                 method: "GET"
 
             }, (err, products) => {
