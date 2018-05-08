@@ -191,7 +191,7 @@ const SDK = {
 
         },
 
-        createProduct:(url, productDescription, stock, sellerID, price, variant, gender, cb ) => {
+        createProduct:(url, productDescription, stock, sellerID, price, variant, gender, category, cb ) => {
             SDK.request({
                 data:{
                     url: url,
@@ -200,7 +200,8 @@ const SDK = {
                     sellerID:sellerID,
                     price: price,
                     variant: variant,
-                    gender: gender
+                    gender: gender,
+                    category: category
 
                 },
                 url:"/Product/New",
