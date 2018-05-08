@@ -174,7 +174,7 @@ const SDK = {
         //Request til at hente produkter fra en specifik sælger
         loadSellerProduct:(cb) => {
 
-            const sellerId = SDK.Storage.load("id");
+            const sellerId = SDK.Storage.load(" id");
 
             SDK.request ({
                 url: "/Product/" + sellerId,
@@ -189,7 +189,7 @@ const SDK = {
         createProduct:(url, productDescription, stock, sellerID, price, variant, gender, cb ) => {
             SDK.request({
                 data:{
-                   // url: url,
+                    url: url,
                     productDescription: productDescription,
                     stock: stock,
                     sellerID:sellerID,

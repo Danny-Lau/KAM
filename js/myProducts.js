@@ -1,5 +1,8 @@
 $(document).ready(() => {
 
+
+    SDK.loadNav();
+
     //Get all the sellers products
     SDK.Product.loadSellerProduct((err, data) => {
 
