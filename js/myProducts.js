@@ -7,7 +7,7 @@ $(document).ready(() => {
     SDK.Product.loadSellerProduct((err, data) => {
 
         let productsList = $("#products");
-        let product = JSON.parse(data);
+        let product = data;
 
         //For every product the specific information are shown
         product.forEach(product => {
