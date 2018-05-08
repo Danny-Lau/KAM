@@ -337,6 +337,17 @@
 
 }
 
+.infoBox{
+    width: 300px;
+    height: 150px;
+
+    float: left;
+    margin-left: 35px;
+
+}
+.information{
+    float: right;
+}
 
 
 
