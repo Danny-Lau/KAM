@@ -157,6 +157,24 @@ const SDK = {
 
     },
 
+    Size:{
+
+        createSize: (size, stock, productId, cb) => {
+            SDK.request({
+                data: {
+                    size: size,
+                    stock: stock,
+                    productId: productId
+                },
+                url:"/Product/New/size",
+                method: "POST"
+            }, (err, data) => {
+
+                 cb(null, data);
+            });
+        },
+    },
+
     Product: {
 
         loadProduct:(cb) => {
@@ -172,9 +190,6 @@ const SDK = {
             });
         },
 
-        onClickProduct:(id) => {
-            window.alert(id);
-        },
 
         //Request til at hente produkter fra en specifik sælger
         loadSellerProduct:(cb) => {
@@ -205,15 +220,13 @@ const SDK = {
         },
 
 
-        createProduct:(url, productDescription, stock, sellerID, price, variant, gender, category, cb ) => {
+        createProduct:(url, productDescription, sellerID, price, gender, category, cb ) => {
             SDK.request({
                 data:{
                     url: url,
                     productDescription: productDescription,
-                    stock: stock,
                     sellerID:sellerID,
                     price: price,
-                    variant: variant,
                     gender: gender,
                     category: category
 
