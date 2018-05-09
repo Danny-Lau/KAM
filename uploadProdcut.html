@@ -25,37 +25,8 @@
     </div>
 
     <div class="form-group">
-        <input type ="text" class="form-control" id="inputStock" placeholder="Stock">
-    </div>
-
-    <div class="form-group">
         <input type ="text" class="form-control" id="inputPrice" placeholder="Price">
     </div>
-
-    <dt>Size for clothes</dt>
-    <form>
-        <select id="size" class="dropdownList">
-            <option value="XXS">Double extra small (XXS)</option>
-            <option value="XS">Extra small (XS) </option>
-            <option value="S">Small (S) </option>
-            <option value="M">Medium (M) </option>
-            <option value="L">Large (Large) </option>
-            <option value="XL">Extra large (XL) </option>
-
-            <option value="36">36 (Shoes) </option>
-            <option value="37">37 (Shoes) </option>
-            <option value="38">38 (Shoes) </option>
-            <option value="39">39 (Shoes) </option>
-            <option value="40">40 (Shoes) </option>
-            <option value="41">41 (Shoes) </option>
-            <option value="42">42 (Shoes) </option>
-            <option value="43">43 (Shoes) </option>
-            <option value="44">44 (Shoes) </option>
-            <option value="45">45 (Shoes) </option>
-            <option value="46">46 (Shoes) </option>
-
-        </select>
-    </form>
 
     <br>
     <dt>Gender</dt>
@@ -70,8 +41,8 @@
 
     <dt>Category</dt>
     <form>
-        <select id="category" class="dropdownList">
-            <option value="Shoe">Shoe</option>
+        <select id="category" class="dropdownList" onchange="getSelectedCategory();">
+            <option value="Shoe" >Shoe</option>
             <option value="Pants">Pants</option>
             <option value="Sweaters">Sweaters</option>
             <option value="Shirt">Shirt</option>
@@ -83,11 +54,95 @@
         </select>
     </form>
 
+    <br>
+
+<div id = "clotheSize">
+    <h3>Sizes </h3>
+    <h6>(Let the field be empty if you don´t have those sizes in stock)</h6>
+
+    <dt>Double extra Small (XXS)</dt>
+    <div class="form-group">
+        <input type="text" class="form-control" id="inputXXS" placeholder="Stock)">
+    </div>
+
+    <dt>Extra Small (XS)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputXS" placeholder="Stock">
+    </div>
+
+    <dt>Small (S)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputS" placeholder="Stock">
+    </div>
+
+    <dt>Medium (M)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputM" placeholder="Stock">
+    </div>
+
+    <dt>Large (L)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputL" placeholder="Stock">
+    </div>
+
+    <dt>Extra Large (L)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputXL" placeholder="Stock">
+    </div>
+
+    <dt>Double exstra large(XXL)</dt>
+    <div class="form-group">
+        <input type ="text" class="form-control" id="inputXXL" placeholder="Stock">
+    </div>
+
+    </div>
 
 
     <br>
 
+    <div id = "shoeSize">
+        <h3>Sizes </h3>
+        <h6>(Let the field be empty if you don´t have those sizes in stock)</h6>
+        <dt>35</dt>
+        <div class="form-group">
+            <input type="text" class="form-control" id="input35" placeholder="Stock)">
+        </div>
+
+        <dt>36</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input36" placeholder="Stock">
+        </div>
+
+        <dt>37</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input37" placeholder="Stock">
+        </div>
+
+        <dt>38</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input38" placeholder="Stock">
+        </div>
+
+        <dt>39</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input39" placeholder="Stock">
+        </div>
+
+        <dt>40</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input40" placeholder="Stock">
+        </div>
+
+        <dt>41</dt>
+        <div class="form-group">
+            <input type ="text" class="form-control" id="input41" placeholder="Stock">
+        </div>
+
+    </div>
+
     <button class="login-btn" id="create-product-button">Create Product</button>
+
+    <div class = "endingDiv"></div>
 
 </form>
 
@@ -100,4 +155,30 @@
     <script src="js/uploadProduct.js"></script>
 
 </body>
+
+
+
+<script>
+
+    window.onload = function (){
+        document.getElementById("clotheSize").style.display = "none";
+        document.getElementById("shoeSize").style.display = "none";
+
+    };
+
+    function getSelectedCategory(){
+        var selectedCategory = document.getElementById("category").value;
+
+        if(selectedCategory === "Shoe") {
+            document.getElementById("clotheSize").style.display = "none";
+            document.getElementById("shoeSize").style.display = "";
+
+        } else {
+            document.getElementById("clotheSize").style.display = "";
+            document.getElementById("shoeSize").style.display = "none";
+
+        }
+
+    }
+</script>
 </html>

@@ -2,15 +2,18 @@ $(document).ready(() => {
 
     SDK.loadNav();
 
-    $("#create-product-button").click(() => {
 
-        const gender = $("#gender").val();
-        const category = $("#category").val();
-        const variant = $("#size") .val();
-        const url = $("#inputURL").val();
-        const productDescription = $("#inputDescription").val();
-        const stock = $("#inputStock").val();
-        const price = $("#inputPrice").val();
+
+
+        $("#create-product-button").click(() => {
+
+            const gender = $("#gender").val();
+            const category = $("#category").val();
+            const variant = $("#size").val();
+            const url = $("#inputURL").val();
+            const productDescription = $("#inputDescription").val();
+            const stock = $("#inputStock").val();
+            const price = $("#inputPrice").val();
 
             if (!url || !productDescription || !stock || !price || !variant || !gender || !category) {
                 alert("Please fill in all required fields");
@@ -33,7 +36,7 @@ $(document).ready(() => {
                 })
             }
 
-    })
+        })
 
 
 });
