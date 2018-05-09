@@ -12,6 +12,9 @@ $(document).ready(() => {
         SDK.Storage.remove(" name");
         SDK.Storage.remove(" number");
         SDK.Storage.remove("CAT");
+        SDK.Storage.remove(" deleteId");
+        SDK.Storage.remove(" genderProduct");
+        SDK.Storage.remove(" productCategory");
 
 
     });

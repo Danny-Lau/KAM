@@ -46,8 +46,28 @@ $(document).ready(() => {
             alert("Change product information");
 
         });
-        
+
+        $(".deleteproduct-btn").click(function(){
+            const deleteProductId = $(this).data("delete-product-id");
+            SDK.Storage.persist(" deleteId", deleteProductId);
+            const type = SDK.Storage.load(" type");
+
+
+            SDK.Product.deleteProduct((err, data) => {
+
+                if(err && err.xhr.status === 401) {
+                    $(".form-group").addClass("There was a mistake");
+                }
+                else if (err) {
+                    console.log("Fail")
+                }
+                else {
+                    alert("Product deleted");
+                }
+            });
+
+        });
+
     });
-
-
 });
+

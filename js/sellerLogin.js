@@ -23,7 +23,7 @@ $(document).ready(() => {
                     console.log("fail")
                 }
                 else {
-                    alert("You are now logged in as a seller")
+                    alert("You are now logged in as a seller");
                     window.location.href = "uploadProdcut.html";
                 }
 

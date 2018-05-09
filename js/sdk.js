@@ -191,6 +191,20 @@ const SDK = {
 
         },
 
+        loadProductFromGender:(cb) => {
+
+            const gender = SDK.Storage.load(" genderProduct");
+
+            SDK.request({
+                url:"/Product/gender/" + gender,
+                method: "GET"
+            }, (err, products) => {
+
+                cb(null, products);
+            })
+        },
+
+
         createProduct:(url, productDescription, stock, sellerID, price, variant, gender, category, cb ) => {
             SDK.request({
                 data:{
@@ -213,7 +227,19 @@ const SDK = {
 
                 cb(null, data);
             })
-        }
+        },
+
+        deleteProduct:(cb) => {
+            const productId = SDK.Storage.load(" deleteId")
+
+            SDK.request({
+                url: "/Product/" + productId,
+                method: "DELETE"
+            }, (err, data) => {
+
+            });
+        },
+
 
     },
 

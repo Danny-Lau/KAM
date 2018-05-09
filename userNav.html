@@ -17,9 +17,9 @@
     <div id="nav-wrapper">
 
         <ul class="navBar">
-            <li><a href="womenSection.html" class="navBtn">WOMEN</a></li>
-            <li><a href="menSection.html" class= "navBtn">MEN</a></li>
-            <li><a href="childrenSection.html">CHILDREN</a></li>
+            <li><a href="genderSection.html" class="navBtn" id="Female">WOMEN</a></li>
+            <li><a href="genderSection.html" class= "navBtn" id="Men">MEN</a></li>
+            <li><a href="productsSection.html" id="Accessories">Accessories</a></li>
 
             <a href="Index.html"><img class="navImg" src="Picture/logo-1.png"/></a>
 
@@ -37,5 +37,19 @@
 
 </body>
 
-<script src="js/logout.js"></script>
+<script src="js/logout.js">
+
+    $("#Female").click(() => {
+
+        SDK.Storage.persist(" genderProduct", "Female");
+    });
+    $("#Men").click(() => {
+        SDK.Storage.persist(" genderProduct", "Male");
+
+    });
+    $("#Accessories").click(() => {
+        SDK.Storage.persist(" productCategory", "Accessories");
+
+    });
+</script>
 </html>
