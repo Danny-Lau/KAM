@@ -14,7 +14,7 @@ $(document).ready(() => {
 
         <div class="normal-page-container">
         <div class="box">
-           <a><img class="productImg product-btn" data-product-id="${product.productID}"  src="${product.url}"/></a>
+           <a><img class="productImg product-btn" data-product-id="${product.productId}"  src="${product.url}"/></a>
             <p class="text" >${product.price}</p>
         </div>
                `;

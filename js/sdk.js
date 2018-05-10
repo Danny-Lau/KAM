@@ -158,7 +158,6 @@ const SDK = {
     },
 
     Size:{
-
         createSize: (size, stock, productId, cb) => {
             SDK.request({
                 data: {
@@ -171,6 +170,20 @@ const SDK = {
             }, (err, data) => {
 
                  cb(null, data);
+            });
+        },
+
+        loadSize: (cb) => {
+
+            const currentProductId = SDK.Storage.load(" currentProductId");
+
+            SDK.request({
+                url: "/Product/sizeID/" + currentProductId,
+                method:"GET"
+
+            }, (err, size) => {
+
+                cb(null, size);
             });
         },
     },
@@ -225,7 +238,7 @@ const SDK = {
                 data:{
                     url: url,
                     productDescription: productDescription,
-                    sellerID:sellerID,
+                    sellerID: sellerID,
                     price: price,
                     gender: gender,
                     category: category
@@ -236,7 +249,9 @@ const SDK = {
 
             }, (err, data) => {
 
-                if (err) return (err);
+                let product = JSON.parse(data);
+
+                SDK.Storage.persist(" newProductId", product.productId);
 
                 cb(null, data);
             })
