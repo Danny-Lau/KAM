@@ -28,8 +28,9 @@ $(document).ready(() => {
                      
                       <br>
                      <br>
-                    <button class="login-btn product-btn" data-product-id="${product.productId}">Edit product</button>
-                    <button class="login-btn deleteProduct-btn" data-delete-product-id="${product.productId}">Delete product</button>
+                 
+                    <button class="login-btn-product product-btn" data-product-id="${product.productId}">Edit product</button>
+                    <button class="login-btn-product deleteProduct-btn" data-delete-product-id="${product.productId}">Delete product</button>
                       
                 </div>
         `);

@@ -232,6 +232,19 @@ const SDK = {
             })
         },
 
+        loadProductFromProductId:(cb) => {
+
+            const productId = SDK.Storage.load(" productID");
+
+            SDK.request({
+                url:"/Product/id/" + productId,
+                method: "GET"
+            }, (err, products) => {
+
+                cb(null, products);
+            })
+        },
+
 
         createProduct:(url, productDescription, sellerID, price, gender, category, cb ) => {
             SDK.request({
