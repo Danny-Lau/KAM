@@ -272,7 +272,7 @@ $(document).ready(() => {
                             });
                         }
 
-                        alert("Product created");
+                        window.location.href  = "myProducts.html";
 
                     }
                 })

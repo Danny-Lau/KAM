@@ -12,11 +12,13 @@ $(document).ready(() => {
 
             const productHTML =`
 
-        <div class="normal-page-container">
-        <div class="box">
-           <a><img class="productImg product-btn" data-product-id="${product.productId}"  src="${product.url}"/></a>
-            <p class="text" >${product.price}</p>
-        </div>
+           
+            <div class="box">
+                <a><img class="productImg product-btn" data-product-id="${product.productId}"  src="${product.url}"/></a>
+                <p class="text" >DKK ${product.price}</p>
+  
+            </div>
+      
                `;
 
             $productList.append(productHTML);
@@ -25,6 +27,7 @@ $(document).ready(() => {
         $(".product-btn").click(function() {
             const productId = $(this).data("product-id");
             SDK.Storage.persist(" productID", productId);
+            window.location.href  = "showSpecificProduct.html";
 
         })
 

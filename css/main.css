@@ -10,6 +10,14 @@
     border: 1px solid black;
     float: left;
     margin-left: 35px;
+    margin-top: 50px;
+}
+.boxIndex {
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 35px;
 }
 
 .productImg{
@@ -19,7 +27,6 @@
     max-width: 100%;
     max-height: 100%;
 }
-
 
 .page-container{
     padding-top: 50px;
@@ -47,7 +54,7 @@
     height: 250px;
     float: left;
     margin-left: 150px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .my-items-img{
@@ -88,12 +95,6 @@
     margin-right: auto;
     max-width: 100%;
     max-height: 100%;
-
-}
-
-.dropdown{
-    margin-top: 150px;
-    font-size: medium;
 
 }
 
@@ -326,6 +327,29 @@
 
 }
 
+.login-btn-product{
+    width: 10%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    float:left;
+}
+
+.login-btn-product:hover{
+    color: #e95f5c;
+
+}
+.dropdown{
+    margin-top: 50px;
+    font-size: medium;
+    background-color: white;
+    height: 30px;
+    width: 5%;
+
+
+}
+
 .dropdownList{
     width: 20%;
     height: 30px;
@@ -340,18 +364,31 @@
 .infoBox{
     width: 300px;
     height: 150px;
-
     float: left;
     margin-left: 35px;
 
 }
 .information{
-    float: right;
+    float: left;
 }
+
 .size{
     float: left;
 }
 
+.productOptions {
+    float: right;
+    margin-right: 400px;
+    margin-top: 75px;
+}
+
+.productTitle {
+    margin-left: 200px;
+}
+
+.description {
+    float: left;
+}
 
 
 
@@ -428,75 +465,4 @@
 #nav ul ul li a:hover{
     color: #e95f5c;
 }
-
-
-
-
-#filtering{
-
-}
-
-#filtering ul{
-    list-style-type: none;
-    position: relative;
-}
-
-#nav ul li{
-    display: inline-block;
-    background-color: black;
-    height: 50px;
-    width: 100px;
-    text-align: center;
-}
-
-
-
-
-#outsideSlide{
-    width: 600px;
-    overflow: hidden;
-
-}
-#slideShow{
-    position: relative;
-    width: 2400px;
-    animation-name: Charity;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-}
-#slideShow img{
-
-    float:left;
-}
-
-@keyframes Charity{
-    0% {
-        left:0px;
-    }
-    20%{
-        left:0px;
-    }
-    25%{
-        left:-600px;
-    }
-    45%{
-        left:-600px;
-    }
-    50%{
-        left:-1200px;
-    }
-    70%{
-        left:-1200px;
-    }
-    75%{
-        left:-1800px;
-    }
-    95%{
-        left:-1800px;
-    }
-    1000% {
-        left: -2400px;
-    }
-}
-
 
