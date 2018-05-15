@@ -203,6 +203,28 @@ const SDK = {
             });
         },
 
+        sellerSignup: (companyName, password, cvr, mail, number,  cb) => {
+            SDK.request({
+                data: {
+                    companyName: companyName,
+                    password: password,
+                    cvr: cvr,
+                    number,
+                    mail: mail,
+
+                },
+                url:"/seller/creatSeller",
+                method: "POST"
+            }, (err, data) => {
+
+                if (err) return cb(err);
+
+                cb(null, data);
+
+            });
+        },
+
+
 
         //Request til at hente produkter fra en specifik sælger
         loadSellerProduct:(cb) => {
